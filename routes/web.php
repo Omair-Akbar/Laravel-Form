@@ -1,11 +1,11 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\UserController;
+use App\Http\Controllers\UserControllers;
 
 Route::get('/', function () {
     return view('welcome');
 });
 
-Route::view("user-form", "user-form");
-Route::post("addUser", [UserController::class, "addUser"]);
+Route::view("/form", "user-difficult-form");
+Route::post("/addUser", [UserControllers::class, "showData"]);
